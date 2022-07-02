@@ -10,8 +10,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Node<Masina> node= new Node<>();
-        Node<Person> personNode= new Node<>();
+
+        //denis doarme
+
 
 
 

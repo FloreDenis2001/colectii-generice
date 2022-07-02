@@ -2,7 +2,8 @@ package listatest;
 
 import com.company.colectii_impl.Set;
 import com.company.modele.Masina;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 class SetTest {
 

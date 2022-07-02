@@ -7,7 +7,7 @@ import com.company.comparatori.ComparatorMarca;
 import com.company.comparatori.ComparatorNume;
 import com.company.modele.Masina;
 import com.company.modele.Person;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 class ListaTest {
 
