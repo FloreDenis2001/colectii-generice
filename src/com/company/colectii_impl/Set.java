@@ -83,4 +83,60 @@ public class Set<T extends Comparable<T>> {
     }
 
 
+    /*public void addSfarsit(T t) {
+        Node<T> node = new Node<>();
+        Node<T> it = head;
+        while (it.getNext() != null) {
+            it = it.getNext();
+        }
+        it.setNext(node);
+        node.setNext(null);
+        node.setData(t);
+    }*/
+
+    public int findPositionErase(T t) {
+        Node<T> it = head;
+        int count = 0;
+        while (it != null) {
+            if (it.getData().compareTo(t) != 0) {
+                it = it.getNext();
+                count++;
+            } else if (it.getData().compareTo(t) == 0) {
+                return count;
+            }
+        }
+        return count;
+    }
+
+    public void erase(T t) {
+        int pozitie = findPositionErase(t);
+        int count = 0;
+        Node<T> it = head;
+        Node<T> prev = null;
+        if (pozitie == 0) {
+            head = it.getNext();
+        } else {
+            while (count <= pozitie - 1) {
+                prev = it;
+                it = it.getNext();
+                count++;
+            }
+            prev.setNext(it.getNext());
+        }
+    }
+
+
+    public void updateObject(T t, T nou) {
+        Node<T> it = head;
+        while (it != null) {
+            if (it.getData().compareTo(t) == 0) {
+                it.setData(nou);
+                it = it.getNext();
+            } else {
+                it = it.getNext();
+            }
+        }
+    }
+
+
 }
