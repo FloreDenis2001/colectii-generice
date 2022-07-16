@@ -92,7 +92,7 @@ public class SimpleHashTable<K, V> {
         }
 
     }
-// de refacut
+
     public V delete(K key) {
          int poz=find(key);
          if(poz==-1){
