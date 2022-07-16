@@ -3,7 +3,7 @@ package listatest;
 import com.company.modele.Masina;
 import com.company.colectii_impl.Coada;
 import com.company.colectii_impl.Stiva;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 class StivasiCoadaTest {
