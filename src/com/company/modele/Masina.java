@@ -77,4 +77,6 @@ public class Masina implements Comparable<Masina>, Exemplu {
             return 0;
         }
     }
+
+
 }
