@@ -1,5 +1,6 @@
 package com.company.colectii_java.Set;
 
+import com.company.comparatori.ComparatorCuloare;
 import com.company.comparatori.ComparatorMarca;
 import com.company.modele.Masina;
 
@@ -13,9 +14,10 @@ public class AplicatiiSet {
     private Set<Masina> masinas;
 
     public AplicatiiSet() {
-        masinas = new TreeSet<>(new ComparatorMarca());
+        masinas = new TreeSet<>(new ComparatorCuloare());
         masinas.add(new Masina(1, "Audi", 2005, "alb"));
         masinas.add(new Masina(2, "Mercedes", 2015, "negru"));
+        masinas.add(new Masina(10, "Mercedes", 2015, "gri"));
         masinas.add(new Masina(3, "Opel", 2039, "rosu"));
         masinas.add(new Masina(4, "Dacia", 2027, "verde"));
     }
@@ -26,5 +28,17 @@ public class AplicatiiSet {
             Masina t=it.next();
             System.out.println(t);
         }
+    }
+
+    public void clear(){
+        this.masinas.clear();
+    }
+
+    public boolean contains(Masina x){
+        return this.masinas.contains(x);
+    }
+
+    public void remove(Masina x){
+        this.masinas.remove(x);
     }
 }
