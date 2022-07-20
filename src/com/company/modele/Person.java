@@ -98,4 +98,9 @@ public class Person implements Comparable<Person>, Exemplu {
             return 0;
         }
     }
+
+
+
+
+
 }

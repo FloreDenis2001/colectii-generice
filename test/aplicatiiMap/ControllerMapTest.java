@@ -10,8 +10,8 @@ class ControllerMapTest {
     @Test
     public void controllerTest(){
         ControllerMap controllerMap=new ControllerMap();
-        controllerMap.afisare("masina");
-        controllerMap.showCars("Salajean","Sabina");
+//        controllerMap.afisare("masina");
+     controllerMap.showCars("Salajean","Sabina");
     }
 
 }

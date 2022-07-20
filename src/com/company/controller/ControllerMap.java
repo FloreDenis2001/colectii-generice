@@ -79,10 +79,28 @@ public class ControllerMap {
 
     public void showCars(String nume,String prenume){
         List<Masina> carList=this.masinaMap.get(new Person(nume,prenume));
-        for(Masina t :carList){
-            System.out.println(t);
+        for(Masina x : carList){
+            System.out.println(x);
         }
     }
+
+
+    public void addCar(String nume,String prenume,Masina t){
+        Person x = new Person(nume,prenume);
+        List<Masina> carList=this.masinaMap.get(x);
+        carList.add(t);
+    }
+
+    public void update(int masinaId,String nume,String prenume,String updateCuloare){
+        Person t = new Person(nume,prenume);
+        List<Masina> carList=this.masinaMap.get(t);
+        for(int i=0;i<carList.size();i++){
+            if(masinaId==carList.get(i).getId()){
+                carList.get(i).setCuloare(updateCuloare);
+            }
+        }
+    }
+
 
 
 
