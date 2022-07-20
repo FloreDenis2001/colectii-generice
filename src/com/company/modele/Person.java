@@ -2,7 +2,7 @@ package com.company.modele;
 
 import com.company.comparatori.Exemplu;
 
-public class Person implements Comparable<Person>,Exemplu {
+public class Person implements Comparable<Person>, Exemplu {
     private int id;
     private String nume;
     private String prenume;
@@ -16,6 +16,21 @@ public class Person implements Comparable<Person>,Exemplu {
         this.varsta = varsta;
         this.mobile = mobile;
     }
+
+    public Person(String nume, String prenume) {
+        this.nume = nume;
+        this.prenume = prenume;
+    }
+
+    public Person(String text) {
+        String[] path = text.split(",");
+        this.id = Integer.parseInt(path[0]);
+        this.nume = path[1];
+        this.prenume = path[2];
+        this.varsta = Integer.parseInt(path[3]);
+        this.mobile = path[4];
+    }
+
 
     public int getId() {
         return id;
@@ -70,7 +85,7 @@ public class Person implements Comparable<Person>,Exemplu {
     @Override
     public boolean equals(Object o) {
         Person x = (Person) o;
-        return this.getId() == x.getId();
+        return (this.getNume().equals(x.getNume()) && this.getPrenume().equals(x.getPrenume()));
     }
 
     @Override
